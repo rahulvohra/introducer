@@ -37,8 +37,8 @@ class IntroTweeter
     tweet = prefix(new_name, count)
     
     names.sort_by { rand }.each do |name|
-      if (tweet + " " + name).length <= 140
-        tweet += " " + name
+      if (tweet + " @" + name).length <= 140
+        tweet += " @" + name
       else
         tweets << tweet
         count += 1
